@@ -22,7 +22,7 @@ user:User;
       following:number;
       html_url:string;
     }
-    let promise = new Promise((resolve,reject)=>{
+    let promise = new Promise((retrieve,reject)=>{
       this.http.get<ApiResponse>("https://api.github.com/users/" + githubUserName+"?access_token=ec315b05b4dec58f222abb17eafd0ba09ab23632").toPromise().then(response=>{
         this.user.avatar_url=response.avatar_url
         this.user.name=response.name
@@ -30,7 +30,7 @@ user:User;
         this.user.followers=response.followers
         this.user.following=response.following
         this.user.html_url=response.html_url
-        resolve()
+        retrieve()
       },
       error=>{
         this.user.avatar_url=""
