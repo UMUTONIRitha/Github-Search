@@ -9,7 +9,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## BDD
-
+* Input:Enter Github user name
+* Output:user image,full name , number of repositories,followers ,following and link 
 
 ## Development server
 
